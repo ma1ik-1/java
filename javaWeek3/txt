@@ -1,0 +1,16 @@
+private static WLD winner(Values userMove, Values move) {
+		// TODO Auto-generated method stub
+		if (userMove == move) {
+			return WLD.DRAW;
+		} else if (userMove == Values.ROCK && move == Values.SCISSORS || userMove == Values.PAPER && move == Values.ROCK
+				|| userMove == Values.SCISSORS && move == Values.PAPER
+				|| userMove == Values.ROCK && move == Values.LIZARD || userMove == Values.LIZARD && move == Values.SPOCK
+				|| userMove == Values.SPOCK && move == Values.SCISSORS
+				|| userMove == Values.SCISSORS && move == Values.LIZARD
+				|| userMove == Values.LIZARD && move == Values.PAPER || userMove == Values.PAPER && move == Values.SPOCK
+				|| userMove == Values.SPOCK && move == Values.ROCK) {
+			return WLD.WIN;
+		} else {
+			return WLD.LOSE;
+		}
+	}
